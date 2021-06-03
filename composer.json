@@ -1,0 +1,19 @@
+{
+    "name": "renan/adapter-silex",
+    "description": "Testing framework silex",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Renan Fortunato",
+            "email": "renanfortunato09@gmail.com"
+        }
+    ],
+    "require": {
+        "silex/silex": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MyApp\\": "src/MyApp"
+        }
+    }
+}
