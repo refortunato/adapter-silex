@@ -2,7 +2,7 @@
 
 namespace MyApp\Adapters;
 
-use MyApp\HttpAdapters\HttpRequest;
+use MyApp\HttpHelpers\HttpRequest;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 

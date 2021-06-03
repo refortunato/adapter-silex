@@ -2,9 +2,9 @@
 
 namespace MyApp\Controllers;
 
-use MyApp\HttpAdapters\HttpRequest;
-use MyApp\HttpAdapters\HttpResponse;
-use MyApp\HttpAdapters\HttpResponseMaker;
+use MyApp\HttpHelpers\HttpRequest;
+use MyApp\HttpHelpers\HttpResponse;
+use MyApp\HttpHelpers\HttpResponseMaker;
 
 abstract class Controller
 {

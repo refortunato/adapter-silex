@@ -1,6 +1,6 @@
 <?php
 
-namespace MyApp\HttpAdapters;
+namespace MyApp\HttpHelpers;
 
 class HttpResponseMaker
 {

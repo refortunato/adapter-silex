@@ -2,21 +2,21 @@
 
 namespace MyApp\Controllers;
 
-use MyApp\HttpAdapters\HttpRequest;
+use MyApp\HttpHelpers\HttpRequest;
 
 class TestController extends Controller
 {
     private static $data = [
         0 => [
-            'id' => 'kopjknjhu',
+            'id' => '9aNV+y0Cck6sky0SirATrg==',
             'name' => 'Joe'
         ],
         1 => [
-            'id' => 'mnvjho8hjgf9h',
-            'name' => 'Doe'
+            'id' => 'TpK5EDzep0+l1kl6WmuN7w==',
+            'name' => 'Robert'
         ],
         2 => [
-            'id' => 'kljniiv0hjvbsogh',
+            'id' => 'KSDfDjIGFkWIOTuQ7/m2ZA==',
             'name' => 'Mark'
         ],
     ];
