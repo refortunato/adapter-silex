@@ -2,6 +2,7 @@
 
 namespace MyApp\Controllers;
 
+use MyApp\Exceptions\NotFoundException;
 use MyApp\HttpHelpers\HttpRequest;
 
 class TestController extends Controller
@@ -33,6 +34,6 @@ class TestController extends Controller
                 return $data + $request->route_params + $request->query_params;
             }
         }
-        throw new \DomainException("Test Not Found.");
+        throw new NotFoundException("Test Not Found.");
     }
 }

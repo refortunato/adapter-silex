@@ -2,6 +2,7 @@
 
 namespace MyApp\Controllers;
 
+use MyApp\Exceptions\NotFoundException;
 use MyApp\HttpHelpers\HttpRequest;
 use MyApp\HttpHelpers\HttpResponse;
 use MyApp\HttpHelpers\HttpResponseMaker;
@@ -14,10 +15,12 @@ abstract class Controller
             try {
                 $result = static::$method_name($httpRequest);
                 return HttpResponseMaker::ok($result);
+            } catch (NotFoundException $e) {
+                return HttpResponseMaker::notFound(['message' => $e->getMessage()]);
             } catch (\DomainException $e) {
-                return HttpResponseMaker::badRequest(['message' => 'Error']);
+                return HttpResponseMaker::badRequest(['message' => $e->getMessage()]);
             } catch (\Exception $e) {
-                return HttpResponseMaker::serverError(['message' => 'Error']);
+                return HttpResponseMaker::serverError(['message' => 'Internal Server Error.']);
             }
         }
         return null;
